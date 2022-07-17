@@ -1,0 +1,210 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import SideBar from "../components/sideBar.astro";
+---
+
+<Layout title="Stalk.gg">
+ <div class="backGround">
+ </div>
+ <div class="container">
+	<SideBar></SideBar>
+	<div class="right">
+       <div class="header">
+	     <div class="links">
+			<a href="#">Reklam ver</a>
+		    <a href="#">Discord</a>
+		 </div>
+		 <div class="cta">
+             <div class="lange">
+				<h4>Tr</h4> <i class="fi fi-br-angle-small-down"></i>
+			 </div>
+			 <a href="#" class="cta-b">Sunucu ekle</a>
+		 </div>
+	   </div>
+	   <div class="search">
+		 <input type="text" placeholder="En yeni ve En popüler Serverler için ara">
+		 <button class="submit"><i class="fi fi-br-search"></i></button>
+	   </div>
+	   <div class="filters">
+		 <div class="filter">Tümü</div>
+		 <div class="filter">Sohbet</div>
+		 <div class="filter">Oyun</div>
+		 <div class="filter">Yayıncı</div>
+		 <div class="filter">Onaysız</div>
+		 <div class="filter">Bilim</div>
+		 <div class="filter">NFT</div>
+		 <div class="filter">Eğlence</div>
+		 <div class="filter">Oyun geliştirme</div>
+	   </div>
+	   <ul class="feeds">
+           <Card title="Saniye" description="Hey Yolcu! Bugün havalı görünüyorsun. Havalılık oranı %12'lerde sürünen Discordumuza gelip oranı yükseltmeye ne dersin?"
+		    likes="323" members="125.4" image="/Saniye-pp.png" ></Card>
+			<Card title="Cinavar" description="Cinavar Kabilesi"
+		    likes="289" members="93.4" image="/cinavar-pp.png"></Card>
+			<Card title="GIF AURA • NFT " description="We are a community focused on providing quality gifs and images for Discord users."
+		    likes="1090" members="280" image="/Aura-pp.png"></Card>
+			<Card title="Uykusuzlar" description="Kendine has ortamında, eğlenceli etkinlikleriyle, yeni insanlarla tanışıp sohbet edebileceğiniz harika bir sunucu!"
+		    likes="123" members="22.7" image="/Uykusuzlar-pp.png"></Card>
+			<Card title="OldButGamer" description="Old But Gamer instagram sayfasının sohbet ve oyun dolu naçizade discord sunucusu :)"
+		    likes="58" members="23.2" image="/Gamer-pp.png"></Card>
+			<Card title="C137" description="C137 is a community for all things C137 related."
+		    likes="143" members="12.5" image="/c137-pp.png"></Card>
+			<Card title="Rickrolling" description="if u reading this right now, you are rick rolled"
+		    likes="100" members="100" image="/rick-pp.png"></Card>
+			
+	   </ul>
+	</div>
+ </div>
+</Layout>
+
+<style>
+.backGround {
+  background: linear-gradient(180deg, #FCEDF6 0%, #EAF4FC 100%);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+}
+.container {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+.right {
+	display: flex;
+	flex-direction: column;
+
+	margin: 24px 48px 0 20px;
+	width: 100%;
+	height: 100%;
+	color: #374957;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+	width: 100%;
+	margin-bottom: 36px;
+}
+.links {
+	display: flex;
+	gap: 16px;
+}
+.links a {
+	color: rgba(55, 73, 87, 0.6);
+
+	text-decoration: none;
+	font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+	transition: 0.3s;
+	border-radius: 8px;
+}
+.links a:hover {
+	color: #374957;
+	background-color: #F3B1FE;
+}
+.cta {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+}
+.lange {
+	display:flex;
+	align-items: center;
+	cursor: pointer;
+}
+.cta-b {
+	text-decoration: none;
+	background: #F3B1FE;
+    border-radius: 8px;
+
+	font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+	padding: 8px 12px;
+	transition: 0.3s;
+}
+.cta-b:hover {
+	background: #EC9FF9
+}
+.search {
+	display: flex;
+	gap: 12px;
+	height: 60px;
+	width: 100%;
+	margin-bottom: 12px;
+}
+.search input {
+	height: 60px;
+	width: 100%;
+	border: none;
+	border-radius: 16px;
+	padding: 0 24px 0 24px;
+	font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+	color: #374957;
+	font-family: 'Poppins', sans-serif;
+	outline-color: #F3B1FE;
+}
+.search input::placeholder {
+	color: rgba(55, 73, 87, 0.6);
+}
+.search .submit {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #F3B1FE;
+	border-radius: 16px;
+	border: none;
+    width: 70px;
+	height: 100%;
+	cursor: pointer;
+	font-size: 24px;
+	color: #374957;
+}
+.filters {
+	display: flex;
+	gap: 12px;
+	width: 100%;
+	margin-bottom: 32px;
+}
+.filter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 16px;
+	background-color:#F3E3F4;
+	border-radius: 8px;
+
+	font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+	cursor: pointer;
+	transition: 0.1s;
+}
+.filter:hover {
+	background-color: #FCD4FF;
+}
+.feeds {
+	display:grid;
+	padding-left: 0;
+	padding-bottom: 50px;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 20px;
+	row-gap: 16px;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	list-style: none;
+}
+
+.feeds::-webkit-scrollbar {
+	background: transparent;
+}
+
+</style>

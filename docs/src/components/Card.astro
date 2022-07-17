@@ -1,0 +1,157 @@
+---
+export interface Props {
+	title: string;
+	image: string;
+	members: string;
+	likes: string;
+	description: string;
+}
+const { title, image, members, likes, description} = Astro.props;
+---
+
+<li class="card">
+    <div class="content">
+	
+
+        <div class="top">
+			<div class="main-t">
+				<img src={image} alt="Server photo">
+			    <div class="info">
+				  <h3>{title}</h3>
+				  <div class="stats">
+					<span class="members"><i class="fi fi-br-user"></i> {members}k üye</span>
+					<span class="likes"><i class="fi fi-br-heart"></i> {likes} Beğeni</span>
+				  </div>
+			    </div>
+			</div>
+            
+			<a href="#" class="like-btn"> <i class="fi fi-br-heart"></i> Beğen</a>
+		</div>
+		<p>{description}</p>
+		<div class="bottom">
+            <div class="left-b">
+				<a href="#" class="categories">Sohbet</a>
+				<a href="#" class="categories">İçerik üretici</a>
+			</div>
+			<div class="right-b">
+				<a href="#" class="Browse">Göz at</a>
+				<a href="#" class="Join">Katıl</a>
+		</div>
+	</div>
+	</div>
+</li>
+<style>
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 550px;
+  height: 180px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 16px;
+  overflow: hidden;
+}
+.card {
+	cursor: pointer;
+}
+.top {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.main-t {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+img {
+  width: 60px;
+  height: 60px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  justify-content: space-between;
+}
+.info h3 {
+	font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+	margin: 0;
+}
+.stats {
+  display: flex;
+  gap: 16px;
+}
+.stats span {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+}
+.stats span i {
+  color: #F3B1FE;
+}
+.top a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    text-decoration: none;
+    color: #374957;
+	gap: 8px;
+	padding: 8px 12px;
+	border-radius: 8px;
+	transition: 0.3s;
+}
+.top a:hover {
+	background: rgba(243, 177, 254, 0.3);
+}
+.content p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  width: 100%;
+  align-items: flex-start;
+}
+.left-b {
+  display: flex;
+  gap: 8px;
+}
+.left-b a {
+  text-decoration: none;
+  color: #F3B1FE;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(243, 177, 254, 0.15);
+}
+.right-b {
+   display: flex;
+   gap: 12px;
+}
+.right-b a {
+  text-decoration: none;
+  color: #374957;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+.right-b .Join {
+	background-color: #F3B1FE;
+	transition: 0.3s;
+}
+.right-b .Join:hover {
+	background: #EC9FF9;
+}
+.right-b .Browse {
+	background: rgba(243, 177, 254, 0.3);
+}
+</style>

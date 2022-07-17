@@ -1,0 +1,31 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+	body {
+		font-family: 'Poppins', sans-serif;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+</style>
